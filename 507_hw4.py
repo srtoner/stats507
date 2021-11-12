@@ -4,15 +4,15 @@
 
 # Import the following Modules:
 
-
+    
+import os.path as os
 import pandas as pd
-import matplotlib.pyplot as plt
-import pandas_datareader as web
 import numpy as np
 import pickle
 import scipy.stats as stats
 from IPython.core.display import display, HTML
-import os.path as os
+import matplotlib.pyplot as plt
+import pandas_datareader as web
 import warnings
 import ci_funcs as ci
 
@@ -20,7 +20,7 @@ warnings.filterwarnings('ignore')
 
 # # Question 0: Pandas Topics: Window Functions
 #
-# Of the many funcitons in Pandas, one which is particularly useful for time 
+# Of the many funcitons in Pandas, one which is particularly useful for time
 # series analysis is the window function. It lets us apply some aggregation 
 # function over a specified lookback period on a rolling basis throughout the
 # time series. This is particularly useful for financial analsyis of equity
@@ -85,8 +85,7 @@ plt.plot(amzn_data['l_returns'])
 
 # For the latter, we see that the
 # volume of AMZN stock traded is quite noisy:
-   
-    
+
 # +
 plt.title("Daily Trading Volume of AMZN")   
 plt.plot(amzn_data['Volume'])
@@ -126,10 +125,10 @@ gc_prices = amzn_data["ma_15"][gc_days]
 fig2 = plt.figure()
 plt.plot(amzn_data["Adj Close"], color = "black")
 plt.scatter( x= gc_prices.index, 
-                  y = gc_prices[:],
-                  marker = "+", 
-                  color = "gold" 
-                  )
+                y = gc_prices[:],
+                marker = "+", 
+                color = "gold" 
+                )
 
 plt.title("Golden Crosses & Adj Close")
 # -
@@ -145,16 +144,17 @@ plt.title("Golden Crosses & Adj Close")
 
 # +
 def calc_total_return(x):
-    """
+    """    
     Parameters
     ----------
-    x : nparray-like object
-        Data of periodic financial returns
+    x : TYPE
+        DESCRIPTION.
 
     Returns
     -------
-    np.float64
-        returns total log return of an equity
+    TYPE
+        DESCRIPTION.
+
     """
     return np.log(x[-1] / x[0]) 
 
@@ -180,13 +180,13 @@ plt.title("Cumulative Log Returns for AMZN")
 # + 
 def get_nhanes_data():
     """
-    Effects: Fetches pre-determined dataset from the internet
+
     Returns
     -------
-    demo_cohorts : pd.DataFrame
-        Demographic data with cohort info
-    oh_cohorts : pd.DataFrame
-        Oral Health data with cohort, participant id
+    demo_cohorts : TYPE
+        DESCRIPTION.
+    oh_cohorts : TYPE
+        DESCRIPTION.
 
     """
     demo_cohorts = []
@@ -302,7 +302,7 @@ else:
 oh_data["id"] = pd.Categorical(oh_data["id"])
 demo_data["id"] = pd.Categorical(demo_data["id"])
 
-dental_status = oh_data
+dental_status = oh_data[["Cohort", "id", "ohx_status"]]
 
 demo_merged = pd.merge(demo_data, 
                        dental_status, 
@@ -368,10 +368,6 @@ demo_merged["college"] = demo_merged.apply(lambda x:
                                        college_status(x["under_20"], 
                                                       x["education"]),
                                                        axis = 1)
-
-#dent_file = open("nhanes_clean_data.pkl", "wb")
-#pickle.dump(demo_merged, dent_file)
-#dent_file.close()
     
 clean_df = demo_merged[["id", 
                         "gender", 

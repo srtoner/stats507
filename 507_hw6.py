@@ -61,19 +61,18 @@
 # This creates an upstream branch with the same name as our current branch.
 # 
 # To merge with the existing main branch, we would proceed with:
-# * `git checkout main`
-# * `git pull`
+# * `git checkout master`
 # * `git merge ps4`
-# * `git push origin main`
+# * `git push origin master`
 # 
 # To view this specific commit, click 
-# [here](https://github.com/srtoner/stats507/commit/96817b7d12449f3eb25d65199ca1a0675d0a821e)
+# [here](https://github.com/srtoner/stats507/commit/870cb81726d0d8aba4bc7f64400118c0a0891745)
 
 # # Question 2 - GitHub Collaboration
 # 1. Create a new directory with `mkdir pandas_notes`
-# 2. Extract PS4 Question 0 code with the `sed` command:
-# * `sed -n '3,16p;17q' hw4/507_hw4.py > pandas_notes/pd_topic_srtoner.py`
-# * `sed -n '21,171l;172q' hw4/507_hw4.py > cat >> pandas_notes/pd_topic_srtoner.py`
+# 2. Extract PS4 Question 0 code with the `sed` and 'awk' command:
+# * `sed -n '3,16p;17q' 507_hw4.py > pandas_notes/pd_topic_srtoner.py`
+# * `awk 'NR >=21 && NR <=171' 507_hw4.py > cat >> pandas_notes/pd_topic_srtoner.py`
 # * Add a title "slide" using vim
 # The link to the file is [here](pandas_notes/pd_topic_srtoner.py)
 # 3. I am currently awaiting a link to the repo of one person above me in the 
