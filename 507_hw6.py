@@ -44,14 +44,15 @@
 # * `git push`
 #
 # To view the specific commit, click 
-# [here](https://github.com/srtoner/stats507/commit/7062f48b8911e9c8fccb53125167f1a1f75020fe)
+# [here](https://github.com/srtoner/stats507/commit/810c289f3cc0af4219b8442faeabce8b34e82207)
 
 # 4. Create a branch using `git branch ps4` and check it out using 
-# `git checkout ps4`. From here we can modify our code in ps2q3.py to add 
+# `git checkout ps4`. From here we can modify our code in `ps2q3.py` to add 
 # the gender field to the dataset. Using vim, we can make these changes by
 # inserting:
-# * `"RIAGENDR",` on line 18
-# *  `"RIAGENDR" : "gender",` on line 31
+# * `"RIAGENDR",` on line 20
+# *  `"RIAGENDR" : "gender",` on line 33
+
 # Write the changes to file and close. We can then commit the changes and 
 # create an upstream branch as follows:
 # * `git commit -a ps2q3.py -m "adding gender"`
