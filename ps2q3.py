@@ -16,7 +16,8 @@ letters = ['G', 'H', 'I', 'J']
 
 demo_columns = ["Cohort", 
                     "SEQN", 
-                    "RIDAGEYR", 
+                    "RIDAGEYR",
+                    "RIAGENDR",
                     "RIDRETH3", 
                     "DMDEDUC2", 
                     "DMDMARTL",
@@ -28,7 +29,8 @@ demo_columns = ["Cohort",
 
 demo_labels = { 
                 "SEQN" : "id", 
-                "RIDAGEYR" : "age", 
+                "RIDAGEYR" : "age",
+                "RIAGENDR" : "gender",
                 "RIDRETH3" : "ethnicity", 
                 "DMDEDUC2" : "education", 
                 "DMDMARTL" : "marital_status",
