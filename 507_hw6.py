@@ -28,7 +28,7 @@
 # * `sed -n '570,685p;686q' 507_hw2.py > cat >> ps2q3.py`
 #
 # We can then add the new file to the repo by executing
-# * `git add ps2q3.py`
+
 # 2. Suppose we want to add a README file. We would create it using vim
 # (or another text editor) as follows:
 # * `vim README.md`
@@ -39,8 +39,8 @@
 # * `[text to display](ps2q3.py)`
 
 # 3. Once finished, we want to push the changes we've made to the remote repo:
-# * `git pull`
-# * `git commit -m 'adding ps2q3 code'`
+# * `git add ps2q3.py README.md`
+# * `git commit -m 'adding ps2q3 code and README.md'`
 # * `git push`
 #
 # To view the specific commit, click 
