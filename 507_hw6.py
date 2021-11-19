@@ -70,7 +70,7 @@
 
 # # Question 2 - GitHub Collaboration
 # 1. Create a new directory with `mkdir pandas_notes`
-# 2. Extract PS4 Question 0 code with the `sed` and 'awk' command:
+# 2. Extract PS4 Question 0 code with the `sed` and 'awk' commands:
 # * `sed -n '3,16p;17q' 507_hw4.py > pandas_notes/pd_topic_srtoner.py`
 # * `awk 'NR >=21 && NR <=171' 507_hw4.py > cat >> pandas_notes/pd_topic_srtoner.py`
 # * Add a title "slide" using vim
